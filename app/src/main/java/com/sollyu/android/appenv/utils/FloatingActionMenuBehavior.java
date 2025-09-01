@@ -1,6 +1,7 @@
 package com.sollyu.android.appenv.utils;
 
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
 import android.support.design.widget.Snackbar;
@@ -20,6 +21,7 @@ public class FloatingActionMenuBehavior extends CoordinatorLayout.Behavior<com.g
         super();
     }
 
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean layoutDependsOn(CoordinatorLayout parent, com.github.clans.fab.FloatingActionMenu child, View dependency) {
         return dependency instanceof Snackbar.SnackbarLayout;
